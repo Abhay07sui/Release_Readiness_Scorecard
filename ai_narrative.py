@@ -1,4 +1,4 @@
-import os
+import streamlit as st
 
 from openai import OpenAI
 
@@ -11,7 +11,7 @@ def generate_release_narrative(
     unresolved_risks
 ):
 
-    api_key = os.getenv("OPENAI_API_KEY")
+    api_key = st.secrets.get("OPENAI_API_KEY")
 
     if not api_key:
         raise ValueError(
@@ -59,5 +59,3 @@ Rules:
     )
 
     return response.output_text
-
-

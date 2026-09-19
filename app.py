@@ -130,12 +130,6 @@ st.markdown(
     "defects, coverage, and unresolved risks**."
 )
 
-st.write(
-    "Evaluate software release readiness using "
-    "test quality, defects, coverage, and risks."
-)
-
-
 # Upload CSV
 uploaded_file = st.file_uploader(
     "Upload Release Metrics CSV",
@@ -172,7 +166,9 @@ if uploaded_file is not None:
             else "GO"
         )
 
+        # Overall readiness score
         overall_score = df["Readiness_Score"].mean()
+
         # Score breakdown
         test_quality = df["Test_Pass_Percentage"].mean() * 0.30
         defect_health = df["Defect_Health"].mean() * 0.30
@@ -441,7 +437,7 @@ if uploaded_file is not None:
             fig_quality,
             use_container_width=True
         )
-        #==========================
+
         # ==========================================
         # DEFECTS AND RISKS
         # ==========================================
@@ -504,36 +500,6 @@ if uploaded_file is not None:
             use_container_width=True
         )
 
-        # Overall readiness score
-        overall_score = df["Readiness_Score"].mean()
-
-        # Score breakdown
-        test_quality = df["Test_Pass_Percentage"].mean() * 0.30
-
-        defect_health = df["Defect_Health"].mean() * 0.30
-
-        coverage_score = df["Coverage_Percentage"].mean() * 0.20
-
-        risk_health = df["Risk_Health"].mean() * 0.20
-
-        #
-
-        st.subheader("Release Decision")
-
-        col1, col2 = st.columns(2)
-
-        with col1:
-            st.metric(
-                "Overall Readiness Score",
-                f"{overall_score:.1f}/100"
-            )
-
-        with col2:
-            st.metric(
-                "Release Decision",
-                overall_decision
-            )
-        
         # ==========================================
         # DETAILED SCORECARD
         # ==========================================
