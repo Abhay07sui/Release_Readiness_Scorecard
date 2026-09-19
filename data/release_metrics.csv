@@ -1,0 +1,13 @@
+Module,Test_Pass_Percentage,Critical_Defects,High_Defects,Coverage_Percentage,Unresolved_Risks
+Login,98,0,1,96,0
+Search,95,0,2,91,1
+Product,94,0,1,89,1
+Cart,92,0,2,87,1
+Payment,82,2,4,71,3
+Orders,88,1,3,78,2
+Profile,97,0,0,94,0
+Notifications,93,0,2,86,1
+Offers,89,0,3,79,2
+Returns,91,0,2,84,1
+Admin,96,0,1,92,0
+Reports,90,1,2,81,2
