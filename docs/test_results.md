@@ -48,9 +48,9 @@ The results are intended to provide evidence that the core release-readiness wor
 
 | Test ID | Expected Result | Actual Result | Status | Evidence |
 |---|---|---|---|---|
-| TC14 | Missing column rejected | Not executed | NOT EXECUTED | |
-| TC15 | Missing value rejected | Not executed | NOT EXECUTED | |
-| TC16 | Test pass >100 rejected | Not executed | NOT EXECUTED | |
+| NT01 | Missing required column | `Coverage_Percentage` removed | Validation error generated | PASS |
+| NT02 | Test pass percentage above 100 | `Test_Pass_Percentage = 120` | Validation error generated | PASS |
+| NT03 | Negative critical defects | `Critical_Defects = -1` | Validation error generated | PASS |
 | TC17 | Test pass <0 rejected | Not executed | NOT EXECUTED | |
 | TC18 | Coverage >100 rejected | Not executed | NOT EXECUTED | |
 | TC19 | Coverage <0 rejected | Not executed | NOT EXECUTED | |
@@ -58,6 +58,15 @@ The results are intended to provide evidence that the core release-readiness wor
 | TC21 | Negative high defects rejected | Not executed | NOT EXECUTED | |
 | TC22 | Negative risks rejected | Not executed | NOT EXECUTED | |
 
+### Executed Negative Validation Tests
+
+The scoring engine was tested with invalid input conditions to verify that data validation prevents incorrect release calculations.
+
+- Missing required column was rejected.
+- Test pass percentage above 100 was rejected.
+- Negative critical defect count was rejected.
+
+All three negative validation tests passed successfully.
 ---
 
 ## 5. Boundary Test Results
