@@ -73,13 +73,23 @@ All three negative validation tests passed successfully.
 
 | Test ID | Expected Result | Actual Result | Status | Evidence |
 |---|---|---|---|---|
-| TC23 | Test pass = 90% passes | Not executed | NOT EXECUTED | |
-| TC24 | Coverage = 80% passes | Not executed | NOT EXECUTED | |
+| BT01 | Exact release thresholds | Test Pass = 90%, Coverage = 80% | GO | PASS |
+| BT02 | Test pass just below threshold | Test Pass = 89.9%, Coverage = 80% | NO-GO | PASS |
+| BT03 | Coverage just below threshold | Test Pass = 90%, Coverage = 79.9% | NO-GO | PASS |
+
 | TC25 | Score = 80 passes | Not executed | NOT EXECUTED | |
 | TC26 | Critical defects = 0 passes | Not executed | NOT EXECUTED | |
-| TC27 | Test pass = 89.9% fails | Not executed | NOT EXECUTED | |
-| TC28 | Coverage = 79.9% fails | Not executed | NOT EXECUTED | |
 
+
+### Executed Boundary Tests
+
+The release-gate logic was tested at the exact configured thresholds and immediately below them.
+
+- At the exact minimum thresholds, the release was marked GO.
+- A test pass rate of 89.9% resulted in NO-GO.
+- Coverage of 79.9% resulted in NO-GO.
+
+This confirms that the configured release gates are enforced correctly at boundary conditions.
 ---
 
 ## 6. Configuration Test Results
