@@ -28,14 +28,14 @@ The results are intended to provide evidence that the core release-readiness wor
 
 | Test ID | Expected Result | Actual Result | Status | Evidence |
 |---|---|---|---|---|
-| TC01 | Valid CSV processed | Not executed | NOT EXECUTED | |
-| TC02 | Readiness score calculated | Not executed | NOT EXECUTED | |
+| TC01 | Valid CSV processed | `test.py` processed all 12 modules successfully | PASS | Terminal output |
+| TC02 | Readiness score calculated | Readiness scores calculated for all 12 modules | PASS | Terminal output |
 | TC03 | Defect health calculated | Not executed | NOT EXECUTED | |
 | TC04 | Risk health calculated | Not executed | NOT EXECUTED | |
-| TC05 | Healthy module marked GO | Not executed | NOT EXECUTED | |
-| TC06 | Critical defect causes NO-GO | Not executed | NOT EXECUTED | |
-| TC07 | Low test pass causes NO-GO | Not executed | NOT EXECUTED | |
-| TC08 | Low coverage causes NO-GO | Not executed | NOT EXECUTED | |
+| TC05 | Healthy module marked GO | Healthy modules such as Login and Profile were marked GO | PASS | Terminal output |
+| TC06 | Critical defect causes NO-GO | Payment, Orders, and Reports with critical defects were marked NO-GO | PASS | Terminal output |
+| TC07 | Low test pass causes NO-GO | Offers with 89% test pass was marked NO-GO | PASS | Terminal output |
+| TC08 | Low coverage causes NO-GO | Offers with 79% coverage was marked NO-GO | PASS | Terminal output |
 | TC09 | Low score causes NO-GO | Not executed | NOT EXECUTED | |
 | TC10 | Multiple blockers identified | Not executed | NOT EXECUTED | |
 | TC11 | Overall decision calculated | Not executed | NOT EXECUTED | |
@@ -105,6 +105,17 @@ The results are intended to provide evidence that the core release-readiness wor
 | TC40 | Decisions appear in dashboard | Not executed | NOT EXECUTED | |
 | TC41 | Dashboard sends results to AI | Not executed | NOT EXECUTED | |
 | TC42 | Complete workflow works | Not executed | NOT EXECUTED | |
+
+---
+
+## 9. Executed Test Session — Scoring Engine
+
+### Execution
+
+Command:
+
+```text
+python test.py
 
 ---
 
