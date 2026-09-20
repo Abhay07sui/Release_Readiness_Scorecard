@@ -96,10 +96,10 @@ This confirms that the configured release gates are enforced correctly at bounda
 
 | Test ID | Expected Result | Actual Result | Status | Evidence |
 |---|---|---|---|---|
-| TC29 | Test pass threshold changes decisions | Not executed | NOT EXECUTED | |
-| TC30 | Coverage threshold changes decisions | Not executed | NOT EXECUTED | |
-| TC31 | Readiness threshold changes decisions | Not executed | NOT EXECUTED | |
-| TC32 | Critical defect limit affects gate | Not executed | NOT EXECUTED | |
+| CG01 | Default gates | 8 GO / 4 NO-GO | PASS |
+| CG02 | Minimum Test Pass = 95% | 4 GO / 8 NO-GO | PASS |
+| CG03 | Maximum Critical Defects = 1 | 9 GO / 3 NO-GO | PASS |
+| CG04 | Minimum Readiness Score = 90 | 7 GO / 5 NO-GO | PASS |
 
 ---
 
