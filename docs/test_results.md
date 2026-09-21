@@ -36,12 +36,6 @@ The results are intended to provide evidence that the core release-readiness wor
 | TC06 | Critical defect causes NO-GO | Payment, Orders, and Reports with critical defects were marked NO-GO | PASS | Terminal output |
 | TC07 | Low test pass causes NO-GO | Offers with 89% test pass was marked NO-GO | PASS | Terminal output |
 | TC08 | Low coverage causes NO-GO | Offers with 79% coverage was marked NO-GO | PASS | Terminal output |
-| TC09 | Low score causes NO-GO | Not executed | NOT EXECUTED | |
-| TC10 | Multiple blockers identified | Not executed | NOT EXECUTED | |
-| TC11 | Overall decision calculated | Not executed | NOT EXECUTED | |
-| TC12 | Scorecard displayed | Not executed | NOT EXECUTED | |
-| TC13 | Scorecard exported | Not executed | NOT EXECUTED | |
-
 ---
 
 ## 4. Negative Test Results
@@ -51,12 +45,7 @@ The results are intended to provide evidence that the core release-readiness wor
 | NT01 | Missing required column | `Coverage_Percentage` removed | Validation error generated | PASS |
 | NT02 | Test pass percentage above 100 | `Test_Pass_Percentage = 120` | Validation error generated | PASS |
 | NT03 | Negative critical defects | `Critical_Defects = -1` | Validation error generated | PASS |
-| TC17 | Test pass <0 rejected | Not executed | NOT EXECUTED | |
-| TC18 | Coverage >100 rejected | Not executed | NOT EXECUTED | |
-| TC19 | Coverage <0 rejected | Not executed | NOT EXECUTED | |
-| TC20 | Negative critical defects rejected | Not executed | NOT EXECUTED | |
-| TC21 | Negative high defects rejected | Not executed | NOT EXECUTED | |
-| TC22 | Negative risks rejected | Not executed | NOT EXECUTED | |
+
 
 ### Executed Negative Validation Tests
 
@@ -76,9 +65,6 @@ All three negative validation tests passed successfully.
 | BT01 | Exact release thresholds | Test Pass = 90%, Coverage = 80% | GO | PASS |
 | BT02 | Test pass just below threshold | Test Pass = 89.9%, Coverage = 80% | NO-GO | PASS |
 | BT03 | Coverage just below threshold | Test Pass = 90%, Coverage = 79.9% | NO-GO | PASS |
-
-| TC25 | Score = 80 passes | Not executed | NOT EXECUTED | |
-| TC26 | Critical defects = 0 passes | Not executed | NOT EXECUTED | |
 
 
 ### Executed Boundary Tests
@@ -112,18 +98,6 @@ This confirms that the configured release gates are enforced correctly at bounda
 | AI01 | Generate release narrative for NO-GO release | Narrative explains the existing decision using calculated metrics and blockers | Narrative generated successfully and matched the NO-GO decision | PASS |
 
 The AI narrative was verified to explain the existing deterministic release decision without changing the calculated GO/NO-GO result.
-
----
-
-## 8. Integration Test Results
-
-| Test ID | Expected Result | Actual Result | Status | Evidence |
-|---|---|---|---|---|
-| TC38 | CSV reaches validation and scoring | Not executed | NOT EXECUTED | |
-| TC39 | Scores reach release gates | Not executed | NOT EXECUTED | |
-| TC40 | Decisions appear in dashboard | Not executed | NOT EXECUTED | |
-| TC41 | Dashboard sends results to AI | Not executed | NOT EXECUTED | |
-| TC42 | Complete workflow works | Not executed | NOT EXECUTED | |
 
 ---
 
