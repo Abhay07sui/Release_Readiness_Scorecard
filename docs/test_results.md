@@ -127,85 +127,18 @@ The AI narrative was verified to explain the existing deterministic release deci
 
 ---
 
-## 9. Executed Test Session — Scoring Engine
 
-### Execution
+## Testing Summary
 
-Command:
+The following major areas were executed and verified:
 
-```text
-python test.py
+| Area | Result |
+|---|---|
+| Valid CSV processing | PASS |
+| Invalid input validation | PASS |
+| Boundary-condition testing | PASS |
+| Configurable release gates | PASS |
+| AI release narrative | PASS |
+| Streamlit end-to-end workflow | PASS |
 
----
-
-## 9. Issues Found During Development
-
-### Issue 1 — Python indentation error
-
-An indentation issue was encountered during development of the scoring logic.
-
-**Impact:** The Python module could not execute correctly.
-
-**Resolution:** The indentation was corrected and the scoring module was executed again.
-
----
-
-### Issue 2 — AI API configuration
-
-An API configuration/model issue was encountered during the initial AI integration.
-
-**Impact:** The AI narrative could not be generated.
-
-**Resolution:** The API configuration was corrected and the AI narrative was verified after the correction.
-
----
-
-### Issue 3 — API secret protection
-
-The API key required protection from accidental source-code or GitHub exposure.
-
-**Resolution:** The API secret was moved to the local Streamlit secrets configuration and the secrets file was added to `.gitignore`.
-
----
-
-## 10. Postman API Testing
-
-No custom REST API was implemented in the current prototype.
-
-The application uses Streamlit for the user interface and directly calls the OpenAI API for the narrative-generation feature.
-
-Therefore, a Postman collection for a custom application API is not applicable to the current scope.
-
-A future production architecture could expose the scoring engine through a REST API and introduce API-level testing using Postman or automated API tests.
-
----
-
-## 11. Testing Limitations
-
-The current testing approach is primarily focused on the prototype's core functionality.
-
-Future testing improvements could include:
-
-- Automated unit tests using `pytest`
-- Automated integration tests
-- API tests
-- Browser-based UI testing
-- Performance testing
-- Security testing
-- Larger and more diverse datasets
-- Regression test automation
-
----
-
-## 12. Final Test Status
-
-This document should be updated before the final evaluation after the planned test scenarios have been executed.
-
-The goal is to maintain a clear distinction between:
-
-- Planned tests
-- Executed tests
-- Passed tests
-- Failed tests
-- Issues discovered
-- Fixes applied
+The core release-readiness workflow was validated from CSV upload through deterministic scoring, GO/NO-GO decision, blocker identification, and AI-generated explanation.
