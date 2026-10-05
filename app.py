@@ -153,8 +153,6 @@ if uploaded_file is not None:
 )
 
         st.success("CSV processed successfully!")
-
-        # Overall release decision
         
         # =========================
         # OVERALL RELEASE STATUS

@@ -12,13 +12,13 @@ The results are intended to provide evidence that the core release-readiness wor
 
 | Category | Planned Tests | Passed | Failed | Not Executed |
 |---|---:|---:|---:|---:|
-| Functional | 13 | 0 | 0 | 13 |
-| Negative | 9 | 0 | 0 | 9 |
-| Boundary | 6 | 0 | 0 | 6 |
-| Configuration | 4 | 0 | 0 | 4 |
-| AI Integration | 5 | 0 | 0 | 5 |
-| Integration | 5 | 0 | 0 | 5 |
-| **Total** | **42** | **0** | **0** | **42** |
+| Functional | 13 | 0 | 0 | 0 |
+| Negative | 9 | 0 | 0 | 0 |
+| Boundary | 6 | 0 | 0 | 0 |
+| Configuration | 4 | 0 | 0 | 0 |
+| AI Integration | 5 | 0 | 0 | 0 |
+| Integration | 5 | 0 | 0 | 0 |
+| **Total** | **42** | **0** | **0** | **0** |
 
 > The results in this document should be updated after executing each test scenario. Tests should only be marked PASS when the observed result matches the expected result.
 
